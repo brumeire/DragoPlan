@@ -1,0 +1,25 @@
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.Navbar {
+  background-color: #333;
+  padding: 10px;
+  color: white;
+}
+
+.Navbar a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.Navbar a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 2em;
+}
