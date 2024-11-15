@@ -24,8 +24,16 @@ router.post('/', async (req, res) => {
   }
 });
 
-module.exports = router;
-
+// Test endpoint to add a new dragodinde
+router.post('/add', async (req, res) => {
+  try {
+    const newDragodinde = new Dragodinde(req.body);
+    const savedDragodinde = await newDragodinde.save();
+    res.status(201).json(savedDragodinde);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
 
 router.post('/mating-calculate', async (req, res) => {
   const { parent1Id, parent2Id } = req.body;
@@ -43,3 +51,5 @@ router.post('/mating-calculate', async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
+module.exports = router;
