@@ -1,5 +1,5 @@
 {
-  "name": "dragodinde-backend",
+  "name": "DragoPlan",
   "version": "1.0.0",
   "description": "Backend server for managing dragodindes with ancestry and mating calculator.",
   "main": "server.js",
