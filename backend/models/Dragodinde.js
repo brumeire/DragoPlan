@@ -8,4 +8,4 @@ const DragodindeSchema = new mongoose.Schema({
   parent2: { type: mongoose.Schema.Types.ObjectId, ref: 'Dragodinde' },
 });
 
-module.exports = mongoose.model('dragodinde', DragodindeSchema);
+module.exports = mongoose.model('Dragodinde', DragodindeSchema);

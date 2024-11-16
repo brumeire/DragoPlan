@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 
 // Models
 const User = require('./models/User');
-const Dragodinde = require('./models/dragodinde');
+const Dragodinde = require('./models/Dragodinde');
 
 // Import Routes
 const authRoutes = require('./routes/auth');
