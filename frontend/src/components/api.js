@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: 'https://dragoplan.onrender.com',
 });
 
 // Attach token for authenticated requests
@@ -17,4 +17,4 @@ export const registerUser = (userData) => API.post('/auth/register', userData);
 export const loginUser = (userData) => API.post('/auth/login', userData);
 export const fetchDragodindes = (userId) => API.get(`/dragodindes?userId=${userId}`);
 export const createDragodinde = (dragodindeData) => API.post('/dragodindes', dragodindeData);
-export const calculateMating = (matingData) => API.post('/dragodindes/mating-calculate', matingData);
+export const calculateMating = (matingData) => API.post('/dragodindes/mating-calculate', matingData);
