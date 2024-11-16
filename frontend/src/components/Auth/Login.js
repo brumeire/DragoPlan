@@ -9,7 +9,7 @@ const Login = ({ setUser }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://dragoplan.onrender.com/auth/login', { email, password });
+      const response = await axios.post('https://dragoplan.onrender.com/api/auth/login', { email, password });
       const { token, user } = response.data;
 
       // Store the token in localStorage

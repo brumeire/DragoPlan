@@ -8,7 +8,7 @@ const MatingCalculator = () => {
 
   const handleCalculate = async () => {
     try {
-      const response = await axios.post('https://dragoplan.onrender.com/mating', {
+      const response = await axios.post('https://dragoplan.onrender.com/api/mating', {
         dragodinde1,
         dragodinde2
       });

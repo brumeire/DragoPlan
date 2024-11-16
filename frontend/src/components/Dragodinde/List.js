@@ -7,7 +7,7 @@ const DragodindeList = () => {
   useEffect(() => {
     const fetchDragodindes = async () => {
       try {
-        const response = await axios.get('https://dragoplan.onrender.com/dragodindes'); // Backend endpoint for dragodindes
+        const response = await axios.get('https://dragoplan.onrender.com/api/dragodindes'); // Backend endpoint for dragodindes
         setDragodindes(response.data);
       } catch (err) {
         console.error('Error fetching dragodindes:', err);

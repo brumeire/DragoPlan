@@ -14,7 +14,7 @@ const Register = ({ setUser }) => {
       return;
     }
     try {
-      const response = await axios.post('https://dragoplan.onrender.com/auth/register', { email, password });
+      const response = await axios.post('https://dragoplan.onrender.com/api/auth/register', { email, password });
       const { token, user } = response.data;
 
       // Store the token in localStorage

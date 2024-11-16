@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'https://dragoplan.onrender.com',
+  baseURL: 'https://dragoplan.onrender.com/api',
 });
 
 // Attach token for authenticated requests

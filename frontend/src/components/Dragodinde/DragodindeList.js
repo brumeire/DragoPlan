@@ -8,7 +8,7 @@ const DragodindeList = ({ user }) => {
     if (user) {
       const fetchDragodindes = async () => {
         try {
-          const response = await axios.get('https://dragoplan.onrender.com/dragodindes', {
+          const response = await axios.get('https://dragoplan.onrender.com/api/dragodindes', {
             params: { ownerId: user.id },
             headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
           });

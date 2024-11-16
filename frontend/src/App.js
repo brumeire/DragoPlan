@@ -16,7 +16,7 @@ const App = () => {
     const token = localStorage.getItem('token');
     if (token) {
       axios
-        .get('https://dragoplan.onrender.com/auth/me', { headers: { Authorization: `Bearer ${token}` } })
+        .get('https://dragoplan.onrender.com/api/auth/me', { headers: { Authorization: `Bearer ${token}` } })
         .then((response) => {
           setUser(response.data);
         })
