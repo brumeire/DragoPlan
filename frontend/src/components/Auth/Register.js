@@ -23,8 +23,22 @@ const Register = ({ setUser }) => {
       // Set the user in state
       setUser(user);
     } catch (err) {
-	  console.error(err);
-      setError('Error creating account');
+      if (err.response) {
+        // Detailed error message from backend
+        console.error("Backend returned status:", err.response.status);
+        console.error("Error message:", err.response.data.message || err.response.statusText);
+
+        // Update error state with more detailed message
+        setError(`Error: ${err.response.data.message || 'An error occurred'}`);
+      } else if (err.request) {
+        // The request was made but no response was received
+        console.error("Request error:", err.request);
+        setError('Network error: No response from the server');
+      } else {
+        // Something happened in setting up the request
+        console.error("Error setting up the request:", err.message);
+        setError(`Error: ${err.message}`);
+      }
     }
   };
 
