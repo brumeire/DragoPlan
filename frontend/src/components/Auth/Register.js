@@ -23,6 +23,7 @@ const Register = ({ setUser }) => {
       // Set the user in state
       setUser(user);
     } catch (err) {
+	  console.error(err);
       setError('Error creating account');
     }
   };
