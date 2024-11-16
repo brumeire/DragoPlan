@@ -24,7 +24,7 @@ router.post('/register', async (req, res) => {
     await newUser.save();
 
     // Generate JWT token
-    const token = jwt.sign({ userId: newUser._id }, 'your_jwt_secret', { expiresIn: '1h' });
+    const token = jwt.sign({ userId: newUser._id }, 'SecretCactusKey117', { expiresIn: '1h' });
     res.json({ token, user: { email: newUser.email, id: newUser._id } });
   } catch (err) {
     console.error(err);
@@ -48,7 +48,7 @@ router.post('/login', async (req, res) => {
     }
 
     // Generate JWT token
-    const token = jwt.sign({ userId: user._id }, 'your_jwt_secret', { expiresIn: '1h' });
+    const token = jwt.sign({ userId: user._id }, 'SecretCactusKey117', { expiresIn: '1h' });
     res.json({ token, user: { email: user.email, id: user._id } });
   } catch (err) {
     console.error(err);
@@ -65,7 +65,7 @@ router.get('/me', async (req, res) => {
   }
 
   try {
-    const decoded = jwt.verify(token, 'your_jwt_secret');
+    const decoded = jwt.verify(token, 'SecretCactusKey117');
     const user = await User.findById(decoded.userId).select('-password');
     res.json(user);
   } catch (err) {
